@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# NOTE: Might be due to the version of ImageMagick or WSL, but convert 
+#       outputs a white background even if -background transparent is 
+#       used. This script uses this behaviour to add a fuzzy white 
+#       border around the image.
+#
+#       Version: ImageMagick 6.9.7-4 Q16 x86_64 20170114
+
 O_FILE=${1:-shrike.png}
 
 function finish {
